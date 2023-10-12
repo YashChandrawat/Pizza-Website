@@ -1,0 +1,102 @@
+.carousel-container {
+  position: relative;
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+  top: 5%;
+  transform: translateY(-50%);
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.btn-left {
+  width: 4%;
+  font-size: larger;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background-color: #fbb200;
+  border: 2px solid #fbb200;
+}
+
+.btn-right {
+  width: 4%;
+  font-size: larger;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background-color: #fbb200;
+  border: 2px solid #fbb200;
+}
+
+.btn-left:hover {
+  background-color: #dc3545;
+  border: 2px solid #dc3545;
+  transition: 0.3s ease;
+}
+
+.btn-right:hover {
+    background-color: #dc3545;
+    border: 2px solid #dc3545;
+    transition: 0.3s ease;
+  }
+
+.custom-prev-arrow {
+  left: 90%;
+}
+
+.custom-next-arrow {
+  right: 10px;
+}
+
+.slick-dots {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.caro-h2{
+    text-align: start;
+    font-size: 2rem;
+    color: red;
+}
+
+.caro-h1{
+    text-align: start;
+    font-size: 3rem;
+}
+
+.main-caro{
+   padding: 6%;
+  background-color: whitesmoke;
+
+}

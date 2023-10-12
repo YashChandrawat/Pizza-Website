@@ -1,0 +1,51 @@
+.reservation{
+    background-color: whitesmoke;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-part-form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    text-align: start;
+    margin-inline: auto;
+}
+
+.right-part-form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-h2{
+    color: red;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.form-h1{
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+
+.image-form{
+    width: 100%;
+}
+
+input{
+    width: 40%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    font-size: large;
+
+}
