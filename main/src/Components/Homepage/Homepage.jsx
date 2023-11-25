@@ -1,7 +1,7 @@
 import React from "react";
 import "./Homepage.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import homePage from "./home-page.png";
+import homePage from "../../assets/home-page.png";
 
 function Homepage() {
   return (
@@ -9,13 +9,18 @@ function Homepage() {
       <div className="left-side-home">
         <div className="inner-left">
           <h1 className="home-heading">
-            Handmade, With an Extra Pinch of <span style={{color:"red"}}>Love</span>
+            Handmade, With an Extra Pinch of{" "}
+            <span style={{ color: "red" }}>Love</span>
           </h1>
           <p className="home-para">
             Order now from the large variety of delicious pizza below
           </p>
           <button className="btn-home">
-            <AiOutlineShoppingCart className="btn-cart"/> Order Now
+            <AiOutlineShoppingCart className="btn-cart" />{" "}
+            <a href="/#order-pizzas" className="anchor-tag">
+              {" "}
+              Order Now
+            </a>
           </button>
         </div>
       </div>
