@@ -7,8 +7,18 @@
   font-family: "Montserrat", sans-serif;
 }
 
+#root {
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
 }
 
 .App-logo {

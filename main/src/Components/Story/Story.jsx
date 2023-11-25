@@ -9,7 +9,7 @@ function Story() {
         <img src={story} alt="" className="img-story" />
       </div>
       <div className="right-part">
-        <h2 className="story-h2">Our Story</h2>
+        <h1 className="story-h2">Our Story</h1>
         <h1 className="story-h1">
           The PizzaHut Has Excellent Quality of Pizza
         </h1>
@@ -21,9 +21,6 @@ function Story() {
           Officia nobis voluptatem est necessitatibus labore quae velit eos a,
           harum maxime sed!
         </p>
-        <button className="btn-home">
-          Read More<AiOutlineRight className="btn-cart"/>
-        </button>
       </div>
     </div>
   );

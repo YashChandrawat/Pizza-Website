@@ -1,95 +1,46 @@
 import React from "react";
-import Slider from "react-slick";
-import PizzaCard from "./PizzaCard";
 import "./PizzaCaro.css";
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-
-const pizzas = [
-  {
-    name: "Margherita",
-    image:
-      "https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/pizza-1.png",
-    price: 10.99,
-    description: "Classic tomato and cheese pizza.",
-  },
-  {
-    name: "Cheese Corn",
-    image:
-      "https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/pizza-2.png",
-    price: 12,
-    description: "This is the cheese corn pizza",
-  },
-  {
-    name: "Cheese Corn",
-    image:
-      "https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/pizza-3.png",
-    price: 12,
-    description: "This is the cheese corn pizza",
-  },
-  {
-    name: "Cheese Corn",
-    image:
-      "https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/pizza-4.png",
-    price: 12,
-    description: "This is the cheese corn pizza",
-  },
-  {
-    name: "Cheese Corn",
-    image:
-      "https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/pizza-1.png",
-    price: 12,
-    description: "This is the cheese corn pizza",
-  },
-];
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../Redux/Slices/cartSlice";
 
 function PizzaCarousel() {
-  const PrevArrow = (props) => {
-    const { style, onClick } = props;
-    return (
-      <div
-        className="custom-prev-arrow btn-left"
-        style={{ ...style, zIndex: "1" }}
-        onClick={onClick}
-      >
-        <AiFillCaretLeft />
-      </div>
-    );
-  };
+  const items = useSelector((state) => state.allcart.items);
+  const onlyCart = useSelector((state) => state.allcart);
 
-  const NextArrow = (props) => {
-    const { style, onClick } = props;
-    return (
-      <div
-        className="custom-next-arrow btn-right"
-        style={{ ...style, zIndex: "1" }}
-        onClick={onClick}
-      >
-        <AiFillCaretRight />
-      </div>
-    );
-  };
-  const settings = {
-    // dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-  };
+  const dispatch = useDispatch();
+  console.log(onlyCart.cart);
 
   return (
-    <div className="main-caro">
+    <div className="main-caro" id="order-pizzas">
       <div className="top">
         <h2 className="caro-h2">Popular Dishes</h2>
         <h1 className="caro-h1">Browse Our Menu</h1>
       </div>
 
-      <Slider {...settings}>
-        {pizzas.map((pizza, index) => (
-          <PizzaCard key={index} pizza={pizza} />
+      <div className="pizza-card-top">
+        {items.map((item) => (
+          <div className="pizza-card">
+            <div className="image-section">
+              <img src={item.image} alt={item.name} className="pizza-image" />
+            </div>
+            <div className="pizza-details">
+              <div className="pizza-part">
+                <h2 className="pizza-name">{item.name}</h2>
+                <h3 className="pizza-price">₹ {item.price}</h3>
+              </div>
+              <p className="pizza-description">{item.description}</p>
+            </div>
+            <button
+              className="btn-home btn-order"
+              onClick={() => {
+                dispatch(addToCart(item));
+              }}
+            >
+              ADD TO CART
+            </button>
+          </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 }

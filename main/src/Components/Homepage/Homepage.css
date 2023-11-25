@@ -1,3 +1,8 @@
+.main-home {
+  display: flex;
+  flex-direction: column;
+}
+
 .homepage {
   display: flex;
   background-color: whitesmoke;
@@ -24,8 +29,6 @@
 
 .home-page-pizza {
   width: 100%;
-
-
 }
 
 .btn-home {
@@ -43,10 +46,9 @@
   vertical-align: middle;
 }
 
-.btn-cart
-{
-    font-size: larger;
-    vertical-align: middle;
+.btn-cart {
+  font-size: larger;
+  vertical-align: middle;
 }
 
 .btn-home:hover {
@@ -59,6 +61,7 @@
   font-size: 5rem;
   font-weight: 900;
   text-align: left;
+  color: black;
   line-height: 1;
 }
 
@@ -71,3 +74,13 @@
   text-align: left;
   margin-top: 5%;
 }
+
+.anchor-tag {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1280px) {
+  
+}
+
